@@ -6,12 +6,13 @@ def alive_person(size, step):
     counter = 0
     while (len(persons) > 1):
         counter = counter + 1
-        if counter % step == 0:
-            persons.pop(index)
-            continue#index = index - 1
-        index = index + 1
         if index > len(persons) - 1:
             index = 0
+        print("Counter = ",counter," Index = ",index)
+        if counter % step == 0:
+            print("Killed Guy = ",persons.pop(index))
+            continue# or index = index - 1
+        index = index + 1
     return persons
 
 
